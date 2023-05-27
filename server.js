@@ -1,11 +1,8 @@
-const mongoose = require("mongoose");
-const dotenv = require("dotenv").config();
-const colors = require("colors");
 const DBConnect = require("./utilities/dbConnect");
 
 const app = require("./app");
 
-// database connection
+// database connection ---
 DBConnect();
 
 // ---------- Server PORT ----------
