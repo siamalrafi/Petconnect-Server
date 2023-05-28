@@ -17,7 +17,7 @@ const userSchema = mongoose.Schema(
       //  email unique is not working
       email: {
          type: String,
-         index: { unique: true },
+         unique: true,
          validate: [validator.isEmail, "Provide a valid Email"],
          trim: true,
          required: [true, "Email address is required"],
@@ -70,8 +70,7 @@ userSchema.pre("save", function (next) {
    const hashedPassword = bcrypt.hashSync(password);
 
    this.password = hashedPassword;
-   this.confirmPassword = undefined;
-
+ 
    next();
 });
 
@@ -130,9 +129,3 @@ module.exports = User;
 "permanentAddress":"944 Russell Street",
 "nationalIdImageURL":"https://i.ibb.co/WnFSs9Y/unnamed.webp",
 */
-
-
-
-
-
-

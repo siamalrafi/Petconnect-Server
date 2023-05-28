@@ -39,9 +39,9 @@ exports.signup = async (req, res, next) => {
 // login user ---
 exports.login = async (req, res, next) => {
    try {
-
       const { email, password } = req.body;
-      console.log(email, password);
+
+      // console.log(email, password); // available
 
       if (!email || !password) {
          return res.status(401).json({
@@ -94,10 +94,11 @@ exports.login = async (req, res, next) => {
       });
    }
 };
-
 exports.getMe = async (req, res) => {
    try {
-      const user = await findUserByEmail(req.user?.email);
+      let user = await findUserByEmail(req.user?.email);
+
+      user.password = undefined;
 
       res.status(200).json({
          status: "success",
