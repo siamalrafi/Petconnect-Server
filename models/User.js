@@ -131,5 +131,3 @@ module.exports = User;
 "nationalIdImageURL":"https://i.ibb.co/WnFSs9Y/unnamed.webp",
 */
 
-
-
