@@ -131,6 +131,3 @@ module.exports = User;
 "nationalIdImageURL":"https://i.ibb.co/WnFSs9Y/unnamed.webp",
 */
 
-git add .
-git commit -m"data added"
-git push
