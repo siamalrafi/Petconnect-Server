@@ -5,7 +5,6 @@ const crypto = require("crypto");
 const bcrypt = require("bcryptjs");
 
 const userSchema = mongoose.Schema(
-   
    {
       name: {
          type: String,
