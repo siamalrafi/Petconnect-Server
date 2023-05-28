@@ -130,4 +130,3 @@ module.exports = User;
 "permanentAddress":"944 Russell Street",
 "nationalIdImageURL":"https://i.ibb.co/WnFSs9Y/unnamed.webp",
 */
-
