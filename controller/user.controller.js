@@ -1,7 +1,7 @@
 // const User = require("../model/User");
 const { generateToken } = require("../utilities/token");
 // const { sendMailWithGmail, sendMailWithMailGun } = require("../utils/email");
-const { signupService } = require("../Services/user.services");
+const { signupService, findUserByEmail } = require("../Services/user.services");
 
 exports.signup = async (req, res, next) => {
    try {
@@ -39,7 +39,9 @@ exports.signup = async (req, res, next) => {
 // login user ---
 exports.login = async (req, res, next) => {
    try {
+
       const { email, password } = req.body;
+      console.log(email, password);
 
       if (!email || !password) {
          return res.status(401).json({

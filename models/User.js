@@ -5,6 +5,7 @@ const crypto = require("crypto");
 const bcrypt = require("bcryptjs");
 
 const userSchema = mongoose.Schema(
+   
    {
       name: {
          type: String,
@@ -13,9 +14,11 @@ const userSchema = mongoose.Schema(
          // minLength: [3, "Name must be at least 3 characters."],
          // maxLength: [100, "Name is too large"],
       },
+
+      //  email unique is not working
       email: {
          type: String,
-         unique: true,
+         index: { unique: true },
          validate: [validator.isEmail, "Provide a valid Email"],
          trim: true,
          required: [true, "Email address is required"],
