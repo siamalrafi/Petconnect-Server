@@ -111,3 +111,9 @@ exports.getMe = async (req, res) => {
       });
    }
 };
+
+// logOut
+exports.logOut = async (req, res) => {
+   try {
+   } catch (error) {}
+};
