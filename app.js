@@ -9,7 +9,7 @@ const userRoutes = require("./routes/v1/user.route");
 app.use(express.json());
 app.use(cors());
 
-//  all routes ---
+// all routes ---
 app.use("/api/v1/users", userRoutes);
 
 // get main routes ---
