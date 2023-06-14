@@ -9,7 +9,7 @@ router.post("/login", userController.login);
 
 router.get("/me", verifyToken, userController.getMe);
 
-// logOut
+//
 router.post("/logout", userController.logOut);
 
 // export router ---
