@@ -11,5 +11,5 @@ router.get("/me", verifyToken, userController.getMe);
 
 router.post("/logout", userController.logOut);
 
-// export router ---
+// export router
 module.exports = router;
